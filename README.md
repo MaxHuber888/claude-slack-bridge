@@ -1,8 +1,28 @@
-# claude-slack-bridge
+<div align="center">
+  <h1>claude-slack-bridge</h1>
+  <p><i>Control Claude Code from your phone via Slack — built for MiniMax M2.5</i></p>
+  <a href="https://nodejs.org" target="_blank">
+    <img src="https://img.shields.io/badge/Node.js-18+-green?logo=node.js&logoColor=white&style=flat-square" />
+  </a>
+  <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">
+    <img src="https://img.shields.io/badge/Claude_Code-CLI-blueviolet?logo=anthropic&logoColor=white&style=flat-square" />
+  </a>
+  <a href="https://platform.minimax.io" target="_blank">
+    <img src="https://img.shields.io/badge/MiniMax-M2.5-orange?style=flat-square" />
+  </a>
+  <a href="https://slack.dev/bolt-js" target="_blank">
+    <img src="https://img.shields.io/badge/Slack-Bolt-4A154B?logo=slack&logoColor=white&style=flat-square" />
+  </a>
+  <a href="https://opensource.org/licenses/MIT" target="_blank">
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" />
+  </a>
+</div>
+
+---
 
 A lightweight bridge that connects a running [Claude Code](https://docs.anthropic.com/en/docs/claude-code) session to a private Slack channel, letting you send prompts and receive responses from your phone or any device — without needing to be at your terminal.
 
-IMPORTANT: This project is built specifically for use with [MiniMax M2.5](https://platform.minimax.io) as a cost-efficient Claude Code backend.
+Built specifically for use with [MiniMax M2.5](https://platform.minimax.io) as a cost-efficient Claude Code backend.
 
 ---
 
@@ -53,10 +73,10 @@ Go to [api.slack.com/apps](https://api.slack.com/apps) → **Create New App → 
 After creation, two manual steps are required:
 
 **Generate an App-Level Token:**
-Go to **Settings → Basic Information → App-Level Tokens → Generate Token**, add the `connections:write` scope, and copy the `xapp-` token into your `.env` file.
+Go to **Settings → Basic Information → App-Level Tokens → Generate Token**, add the `connections:write` scope, and copy the `xapp-` token.
 
 **Install to your workspace:**
-Go to **OAuth & Permissions → Install to Workspace** and copy the `xoxb-` bot token into your `.env` file.
+Go to **OAuth & Permissions → Install to Workspace** and copy the `xoxb-` bot token.
 
 **Register slash commands:**
 Go to **Features → Slash Commands** and create entries for `/cost`, `/exit`, `/new`, and `/rule`. No request URL is needed — Socket Mode handles delivery.
