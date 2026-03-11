@@ -1,0 +1,21 @@
+{
+	"name": "claude-slack-bridge",
+	"version": "1.0.0",
+	"description": "A Slack bot that bridges messages to Claude Code CLI",
+	"main": "bridge.cjs",
+	"scripts": {
+		"start": "node bridge.cjs"
+	},
+	"keywords": [
+		"slack",
+		"claude",
+		"bridge",
+		"chatbot"
+	],
+	"license": "MIT",
+	"type": "commonjs",
+	"dependencies": {
+		"@slack/bolt": "^4.6.0",
+		"dotenv": "^17.3.1"
+	}
+}
